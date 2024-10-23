@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular.nvim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p,
+        ul,
+        table {
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Modular.nvim</h1>
+        <p align="center">
+            <img src="docs/1.png" alt="Image 1">
+        </p>
+        <p align="center">
+            <img src="docs/2.png" alt="Image 2">
+        </p>
+
+        <h2>Installation</h2>
+
+        <h3>Install Neovim</h3>
+        <p>modular.nvim targets <em>only</em> the latest
+            <a href="https://github.com/neovim/neovim/releases/tag/stable">stable</a> and
+            <a href="https://github.com/neovim/neovim/releases/tag/nightly">nightly</a> versions of Neovim.
+            Make sure you have the latest versions installed if you're experiencing issues.
+        </p>
+
+        <h3>Install External Dependencies</h3>
+        <ul>
+            <li>Basic utils: <code>git</code>, <code>make</code>, <code>unzip</code>, C Compiler (<code>gcc</code>)</li>
+            <li><a href="https://github.com/BurntSushi/ripgrep#installation">ripgrep</a></li>
+            <li>Clipboard tool (xclip/xsel/win32yank or other depending on platform)</li>
+            <li>A <a href="https://www.nerdfonts.com/">Nerd Font</a> (optional)</li>
+            <li>Language Setup (npm for Typescript, go for Golang, etc.)</li>
+        </ul>
+
+        <h3>Install Modular</h3>
+        <p><strong>NOTE:</strong> Backup your previous configuration (if any exists)</p>
+        <pre><code>mv ~/.config/nvim ~/.config/nvim.bak
+                mv ~/.local/share/nvim ~/.local/share/nvim.bak
+                mv ~/.local/state/nvim ~/.local/state/nvim.bak
+                mv ~/.cache/nvim ~/.cache/nvim.bak</code></pre>
+
+        <p>Neovim's configurations are located under the following paths, depending on your OS:</p>
+        <table>
+            <tr>
+                <th>OS</th>
+                <th>Path</th>
+            </tr>
+            <tr>
+                <td>Linux, MacOS</td>
+                <td><code>$XDG_CONFIG_HOME/nvim</code>, <code>~/.config/nvim</code></td>
+            </tr>
+            <tr>
+                <td>Windows (cmd)</td>
+                <td><code>%localappdata%\nvim</code></td>
+            </tr>
+            <tr>
+                <td>Windows (powershell)</td>
+                <td><code>$env:LOCALAPPDATA\nvim</code></td>
+            </tr>
+        </table>
+
+        <h3>Clone modular.nvim</h3>
+        <details>
+            <summary>Linux and Mac</summary>
+            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git
+                    "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim</code></pre>
+        </details>
+
+        <details>
+            <summary>Windows</summary>
+            <p>If you're using <code>cmd.exe</code>:</p>
+            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git "%localappdata%\nvim"</code></pre>
+            <p>If you're using <code>powershell.exe</code>:</p>
+            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git "${env:LOCALAPPDATA}\nvim"</code>
+            </pre>
+        </details>
+
+        <h3>Post Installation</h3>
+        <p>Start Neovim</p>
+        <pre><code>nvim</code></pre>
+        <p>That's it! Lazy will install all the plugins you have. Use <code>:Lazy</code> to view
+            current plugin status. Hit <code>q</code> to close the window.</p>
+
+        <details>
+            <summary>Fedora Install Steps</summary>
+            <pre><code>sudo dnf install -y gcc make git ripgrep fd-find unzip neovim</code></pre>
+        </details>
+
+        <details>
+            <summary>Arch Install Steps</summary>
+            <pre><code>sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim</code></pre>
+        </details>
+
+        <h2>License</h2>
+        <p>Based on <a href="https://github.com/nvim-lua/kickstart.nvim">Kickstart.nvim</a>.
+            This project is licensed under MIT. Please refer to the <a href="LICENSE">LICENSE</a> file for detailed
+            license information.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Keymaps</h2>
+        <table>
+            <tr>
+                <th>Клавиша</th>
+                <th>Описание</th>
+            </tr>
+            <tr>
+                <td><strong>Telescope</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>leader + f</td>
+                <td>Поиск файлов</td>
+            </tr>
+            <tr>
+                <td>leader + p</td>
+                <td>Поиск проекта</td>
+            </tr>
+            <tr>
+                <td>leader + b</td>
+                <td>Поиск буфера</td>
+            </tr>
+            <tr>
+                <td>leader + h</td>
+                <td>Поиск по истории</td>
+            </tr>
+            <tr>
+                <td>leader + r</td>
+                <td>Поиск текста</td>
+            </tr>
+            <tr>
+                <td>leader + k</td>
+                <td>Поиск по ключевым картам</td>
+            </tr>
+            <tr>
+                <td><strong>Harpoon</strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>leader + h</td>
+                <td>Меню Harpoon</td>
+            </tr>
+            <tr>
+                <td>leader + a</td>
+                <td>Добавить файл в Harpoon</td>
+            </tr>
+            <tr>
+                <td>C-1</td>
+                <td>Первый файл Harpoon</td>
+            </tr>
+            <!-- Continue with other key mappings as needed -->
+        </table>
+    </div>
+</body>
+
+</html>
