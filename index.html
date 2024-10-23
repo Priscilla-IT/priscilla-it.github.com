@@ -9,19 +9,26 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="keymaps.html">Клавиши</a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <h1>Modular.nvim</h1>
 
         <div class="image-container" align="center">
-            <img src="img/1.png" alt="Изображение 1">
-            <img src="img/2.png" alt="Изображение 2">
+            <img src="img/1.png" alt="Изображение 1" class="responsive-img">
+            <img src="img/2.png" alt="Изображение 2" class="responsive-img">
         </div>
 
         <h2>Установка</h2>
 
         <h3>Установите Neovim</h3>
         <p>
-            modular.nvim ориентирован <em>только</em> на последние
+            <strong>modular.nvim</strong> ориентирован <em>только</em> на последние
             <a href="https://github.com/neovim/neovim/releases/tag/stable">стабильные</a> и
             <a href="https://github.com/neovim/neovim/releases/tag/nightly">ночные</a> версии Neovim.
             Убедитесь, что у вас установлены последние версии, если вы испытываете проблемы.
@@ -38,10 +45,12 @@
 
         <h3>Установите Modular</h3>
         <p><strong>ПРИМЕЧАНИЕ:</strong> Создайте резервную копию вашей предыдущей конфигурации (если она существует)</p>
-        <pre><code>mv ~/.config/nvim ~/.config/nvim.bak
+        <pre class="code-block"><code>
+                mv ~/.config/nvim ~/.config/nvim.bak
                 mv ~/.local/share/nvim ~/.local/share/nvim.bak
                 mv ~/.local/state/nvim ~/.local/state/nvim.bak
-                mv ~/.cache/nvim ~/.cache/nvim.bak</code></pre>
+                mv ~/.cache/nvim ~/.cache/nvim.bak
+            </code></pre>
 
         <p>Конфигурации Neovim находятся по следующим путям в зависимости от вашей ОС:</p>
         <table>
@@ -66,33 +75,46 @@
         <h3>Клонируйте modular.nvim</h3>
         <details>
             <summary>Linux и Mac</summary>
-            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git
-                    "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim</code></pre>
+            <pre class="code-block"><code>
+                    git clone https://github.com/masajinobe-ef/modular.nvim.git \
+                    "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+                </code></pre>
         </details>
 
         <details>
             <summary>Windows</summary>
             <p>Если вы используете <code>cmd.exe</code>:</p>
-            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git "%localappdata%\nvim"</code></pre>
+            <pre class="code-block"><code>
+                    git clone https://github.com/masajinobe-ef/modular.nvim.git \
+                    "%localappdata%\nvim"
+                </code></pre>
             <p>Если вы используете <code>powershell.exe</code>:</p>
-            <pre><code>git clone https://github.com/masajinobe-ef/modular.nvim.git "${env:LOCALAPPDATA}\nvim"</code>
-            </pre>
+            <pre class="code-block"><code>
+                    git clone https://github.com/masajinobe-ef/modular.nvim.git \
+                    "${env:LOCALAPPDATA}\nvim"
+                </code></pre>
         </details>
 
         <h3>Постустановка</h3>
         <p>Запустите Neovim</p>
-        <pre><code>nvim</code></pre>
+        <pre class="code-block"><code>nvim</code></pre>
         <p>Вот и всё! Lazy установит все плагины, которые у вас есть. Используйте <code>:Lazy</code> для просмотра
             текущего статуса плагина. Нажмите <code>q</code>, чтобы закрыть окно.</p>
 
         <details>
             <summary>Шаги установки Fedora</summary>
-            <pre><code>sudo dnf install -y gcc make git ripgrep fd-find unzip neovim</code></pre>
+            <pre class="code-block"><code>
+                    sudo dnf install -y \
+                    gcc make git ripgrep fd-find unzip neovim
+                </code></pre>
         </details>
 
         <details>
             <summary>Шаги установки Arch</summary>
-            <pre><code>sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim</code></pre>
+            <pre class="code-block"><code>
+                    sudo pacman -S --noconfirm --needed \
+                    gcc make git ripgrep fd unzip neovim
+                </code></pre>
         </details>
 
         <h2>Лицензия</h2>
@@ -101,7 +123,6 @@
             для подробной информации о лицензии.
         </p>
 
-        <h2>Перейти к <a href="keymaps.html">Клавишам</a></h2>
     </div>
 </body>
 

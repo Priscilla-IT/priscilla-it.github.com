@@ -1,99 +1,245 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клавиши Modular.nvim</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Клавиши Neovim</title>
+    <link rel="stylesheet" type="text/css" href="keymaps.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Клавиши Modular.nvim</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Клавиша</th>
-                    <th>Описание</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Telescope</strong></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>`leader + f`</td>
-                    <td>Поиск файлов</td>
-                </tr>
-                <tr>
-                    <td>`leader + p`</td>
-                    <td>Поиск проекта</td>
-                </tr>
-                <tr>
-                    <td>`leader + b`</td>
-                    <td>Поиск буфера</td>
-                </tr>
-                <tr>
-                    <td>`leader + h`</td>
-                    <td>Поиск по истории</td>
-                </tr>
-                <tr>
-                    <td>`leader + r`</td>
-                    <td>Поиск текста</td>
-                </tr>
-                <tr>
-                    <td>`leader + k`</td>
-                    <td>Поиск по ключевым картам</td>
-                </tr>
-                <tr>
-                    <td><strong>Harpoon</strong></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>`leader + h`</td>
-                    <td>Меню Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`leader + a`</td>
-                    <td>Добавить файл в Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-1`</td>
-                    <td>Первый файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-2`</td>
-                    <td>Второй файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-3`</td>
-                    <td>Третий файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-4`</td>
-                    <td>Четвёртый файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-S-P`</td>
-                    <td>Предыдущий файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td>`C-S-N`</td>
-                    <td>Следующий файл Harpoon</td>
-                </tr>
-                <tr>
-                    <td><strong>LSP</strong></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>`gd`</td>
-                    <td>К определению</td>
-                </tr>
-                <tr>
-                    <td>`gr`</td>
-                    <td>К ссылкам</td>
-                </tr>
-                <tr
+
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Клавиша</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"><strong>Telescope</strong></td>
+            </tr>
+            <tr>
+                <td>leader + f</td>
+                <td>Поиск файлов</td>
+            </tr>
+            <tr>
+                <td>leader + p</td>
+                <td>Поиск проекта</td>
+            </tr>
+            <tr>
+                <td>leader + b</td>
+                <td>Поиск буфера</td>
+            </tr>
+            <tr>
+                <td>leader + h</td>
+                <td>Поиск по истории</td>
+            </tr>
+            <tr>
+                <td>leader + r</td>
+                <td>Поиск текста</td>
+            </tr>
+            <tr>
+                <td>leader + k</td>
+                <td>Поиск по ключевым картам</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Harpoon</strong></td>
+            </tr>
+            <tr>
+                <td>leader + h</td>
+                <td>Меню Harpoon</td>
+            </tr>
+            <tr>
+                <td>leader + a</td>
+                <td>Добавить файл в Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + 1</td>
+                <td>Первый файл Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + 2</td>
+                <td>Второй файл Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + 3</td>
+                <td>Третий файл Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + 4</td>
+                <td>Четвёртый файл Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + P</td>
+                <td>Предыдущий файл Harpoon</td>
+            </tr>
+            <tr>
+                <td>Ctrl + N</td>
+                <td>Следующий файл Harpoon</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>LSP</strong></td>
+            </tr>
+            <tr>
+                <td>gd</td>
+                <td>К определению</td>
+            </tr>
+            <tr>
+                <td>gr</td>
+                <td>К ссылкам</td>
+            </tr>
+            <tr>
+                <td>gI</td>
+                <td>К реализации</td>
+            </tr>
+            <tr>
+                <td>leader + D</td>
+                <td>Тип данных</td>
+            </tr>
+            <tr>
+                <td>leader + ds</td>
+                <td>Символы документа</td>
+            </tr>
+            <tr>
+                <td>leader + ws</td>
+                <td>Символы рабочей области</td>
+            </tr>
+            <tr>
+                <td>leader + rn</td>
+                <td>Переименовать</td>
+            </tr>
+            <tr>
+                <td>leader + ca</td>
+                <td>Действия с кодом</td>
+            </tr>
+            <tr>
+                <td>gD</td>
+                <td>К объявлению</td>
+            </tr>
+            <tr>
+                <td>leader + th</td>
+                <td>Вкл./выкл. подсказки</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Работа с буферами и окнами</strong></td>
+            </tr>
+            <tr>
+                <td>leader + b</td>
+                <td>Открыть буфер</td>
+            </tr>
+            <tr>
+                <td>leader + x</td>
+                <td>Закрыть буфер</td>
+            </tr>
+            <tr>
+                <td>leader + X</td>
+                <td>Закрыть все буферы</td>
+            </tr>
+            <tr>
+                <td>&lt;Tab&gt;</td>
+                <td>Следующий буфер</td>
+            </tr>
+            <tr>
+                <td>&lt;S-Tab&gt;</td>
+                <td>Предыдущий буфер</td>
+            </tr>
+            <tr>
+                <td>leader + sv</td>
+                <td>Разделить вертикально окно</td>
+            </tr>
+            <tr>
+                <td>leader + sh</td>
+                <td>Разделить горизонтально окно</td>
+            </tr>
+            <tr>
+                <td>leader + se</td>
+                <td>Равномерное распределение окон</td>
+            </tr>
+            <tr>
+                <td>leader + sc</td>
+                <td>Закрыть окно</td>
+            </tr>
+            <tr>
+                <td>&lt;Up/Down&gt;</td>
+                <td>Увеличить/уменьшить окно</td>
+            </tr>
+            <tr>
+                <td>&lt;Left/Right&gt;</td>
+                <td>Увеличить/уменьшить окно</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Прочее</strong></td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>Соединить строку с следующей</td>
+            </tr>
+            <tr>
+                <td>J / K (visual mode)</td>
+                <td>Переместить строки вниз/вверх</td>
+            </tr>
+            <tr>
+                <td>leader + p</td>
+                <td>Вставить без замены буфера</td>
+            </tr>
+            <tr>
+                <td>leader + d</td>
+                <td>Удалить без копирования в буфер</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Вставить текст</td>
+            </tr>
+            <tr>
+                <td>leader + g</td>
+                <td>Открыть Neogit</td>
+            </tr>
+            <tr>
+                <td>leader + rw</td>
+                <td>Заменить слово</td>
+            </tr>
+            <tr>
+                <td>n/N</td>
+                <td>Следующий/предыдущий поиск + центрировать</td>
+            </tr>
+            <tr>
+                <td>&lt;Esc&gt;</td>
+                <td>Снять подсветку поиска</td>
+            </tr>
+            <tr>
+                <td>([ + d) / (] + d)</td>
+                <td>Предыдущее / Следующее сообщение диагностики</td>
+            </tr>
+            <tr>
+                <td>leader + d</td>
+                <td>Показать сообщение диагностики</td>
+            </tr>
+            <tr>
+                <td>leader + e</td>
+                <td>Открыть Neotree</td>
+            </tr>
+            <tr>
+                <td>leader + mx</td>
+                <td>Сделать файл исполняемым</td>
+            </tr>
+            <tr>
+                <td>leader + l</td>
+                <td>Lazy plugin manager</td>
+            </tr>
+            <tr>
+                <td>Ctrl + q</td>
+                <td>Выйти из Neovim</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
