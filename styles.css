@@ -51,7 +51,7 @@ table {
 .responsive-img {
     width: 80%;
     /* Уменьшение размера изображений */
-    max-width: 500px;
+    max-width: 1024px;
     /* Максимальная ширина */
     height: auto;
     margin: 10px 0;
